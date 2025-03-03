@@ -1,5 +1,7 @@
 package com.financehub.models;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -8,8 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Client {
     @Id
     private String id;
+    @NotBlank
     private String name;
+    @NotBlank @Email
     private String email;
+    @NotBlank
     private String password;
     private int age;
 

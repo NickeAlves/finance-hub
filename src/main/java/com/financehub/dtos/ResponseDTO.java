@@ -1,4 +1,4 @@
 package com.financehub.dtos;
 
-public record ResponseDTO(String clientId, String name, String email, String token) {
+public record ResponseDTO(String name, String token, String clientId) {
 }

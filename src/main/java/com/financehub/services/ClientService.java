@@ -31,6 +31,7 @@ public class ClientService {
             existingClient.setName(client.getName());
             existingClient.setEmail(client.getEmail());
             existingClient.setPassword(client.getPassword());
+            existingClient.setAge(client.getAge());
             return clientRepository.save(client);
         });
     }
